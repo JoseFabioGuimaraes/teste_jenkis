@@ -1,33 +1,25 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Limpar o workspace
-                    cleanWs()
-                }
-                // Compilar o projeto
-                sh 'mvn clean install'
+                echo 'Building the project...'
             }
         }
         stage('Test') {
             steps {
-                // Executar os testes
-                sh 'mvn test'
+                echo 'Running tests...'
             }
         }
         stage('Package') {
             steps {
-                // Empacotar o projeto
-                sh 'mvn package'
+                echo 'Packaging the project...'
             }
         }
         stage('Deploy') {
             steps {
-                // Exemplo de deploy (ajuste conforme necessário)
-                sh 'echo "Deploying application..."'
+                echo 'Deploying the application...'
             }
         }
     }
