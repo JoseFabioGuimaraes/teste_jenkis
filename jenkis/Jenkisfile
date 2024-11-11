@@ -2,11 +2,6 @@ pipeline {
     agent none
 
     stages {
-        stage('Start') {
-            steps {
-                echo 'Starting the pipeline...'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building the project...'
@@ -25,11 +20,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-            }
-        }
-        stage('End') {
-            steps {
-                echo 'Pipeline finished.'
             }
         }
     }
