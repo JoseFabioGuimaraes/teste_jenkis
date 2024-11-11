@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: mysql://
+  jpa:
+    properties:
+      hibernate:
+        format_sql: 'false'
+    hibernate:
+      ddl-auto: none
+    show-sql: 'false'
